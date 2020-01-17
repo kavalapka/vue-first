@@ -13,6 +13,14 @@ import HelloWorld from '@/components/HelloWorld.vue';
 //
 // const show: 'Show',
 //   hide: 'Hide',
+function reverseMessage() {
+  this.userMsg = this.userMsg.split('').reverse().join('');
+}
+
+function switchVis() {
+  this.visible = !this.visible;
+  this.showHide = this.visible ? 'Hide' : 'Show';
+}
 
 export default {
   name: 'home',
@@ -27,13 +35,8 @@ export default {
     };
   },
   methods: {
-    reverseMessage() {
-      this.userMsg = this.userMsg.split('').reverse().join('');
-    },
-    switchVis() {
-      this.visible = !this.visible;
-      this.showHide = this.visible ? 'Hide' : 'Show';
-    },
+    reverseMessage,
+    switchVis,
   },
 };
 </script>
