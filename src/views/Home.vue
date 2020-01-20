@@ -10,7 +10,7 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import HelloWorld from '../components/HelloWorld.vue';
 import Users from '../components/Users.vue';
 
 function reverseMessage() {
@@ -43,7 +43,6 @@ export default {
   async created() {
     const userResponse = await fetch('https://jsonplaceholder.typicode.com/users');
     this.users = await userResponse.json();
-    console.log('users: ', this.users);
   },
 };
 </script>
