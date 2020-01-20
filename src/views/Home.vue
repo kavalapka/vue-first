@@ -4,6 +4,7 @@
     <HelloWorld message="My First Vue.js App" :userMsg="userMsg"
                 :reverseMessage="reverseMessage" :visible="visible" :switchVis="switchVis"
                 :showHide="showHide"/>
+    <Rating :grade="3" :maxStars="5" :hasCounter="true"/>
     <Users :users="users"/>
   </div>
 </template>
@@ -12,6 +13,7 @@
 // @ is an alias to /src
 import HelloWorld from '../components/HelloWorld.vue';
 import Users from '../components/Users.vue';
+import Rating from '../components/Rating.vue';
 
 function reverseMessage() {
   this.userMsg = this.userMsg.split('').reverse().join('');
@@ -27,6 +29,7 @@ export default {
   components: {
     Users,
     HelloWorld,
+    Rating,
   },
   data() {
     return {

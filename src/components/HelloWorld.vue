@@ -12,7 +12,6 @@
     <h3>Interaction with user</h3>
     <p>{{ userMsg }}</p>
     <button v-on:click="reverseMessage">Reverse Message</button>
-    <h3>Ecosystem</h3>
   </div>
 </template>
 
