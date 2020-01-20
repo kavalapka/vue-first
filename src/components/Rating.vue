@@ -39,9 +39,6 @@ export default {
 
 <style scoped lang="scss">
   $active-color: #f3d23e;
-  h3 {
-    margin: 40px 0 0;
-  }
   .rating {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     font-size: 22px;

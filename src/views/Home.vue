@@ -2,10 +2,10 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld message="My First Vue.js App" :userMsg="userMsg"
-                :reverseMessage="reverseMessage" :visible="visible" :switchVis="switchVis"
+                :visible="visible" :switchVis="switchVis"
                 :showHide="showHide"/>
-    <Rating :grade="3" :maxStars="5" :hasCounter="true"/>
-    <Users :users="users"/>
+    <Rating :grade="5" :maxStars="5" :hasCounter="true"/>
+    <Users :users="users" :isVisible="false"/>
   </div>
 </template>
 
@@ -14,10 +14,6 @@
 import HelloWorld from '../components/HelloWorld.vue';
 import Users from '../components/Users.vue';
 import Rating from '../components/Rating.vue';
-
-function reverseMessage() {
-  this.userMsg = this.userMsg.split('').reverse().join('');
-}
 
 function switchVis() {
   this.visible = !this.visible;
@@ -40,7 +36,6 @@ export default {
     };
   },
   methods: {
-    reverseMessage,
     switchVis,
   },
   async created() {
@@ -49,3 +44,10 @@ export default {
   },
 };
 </script>
+
+<style>
+  h3 {
+    margin: 40px 0 0;
+    color: #2c3e50;
+  }
+</style>
